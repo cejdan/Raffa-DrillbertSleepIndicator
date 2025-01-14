@@ -17,7 +17,7 @@ func _init():
 func _ready():
 	ModLoaderLog.info("Done", MYMODNAME_LOG)
 	add_to_group("mod_init")
-	StageManager.connect("level_ready", self, "listenToDrillbot")
+	StageManager.connect("level_ready", listenToDrillbot)
 
 func listenToDrillbot():
 	Data.listen(self, "drillbot.headcount")
@@ -30,7 +30,11 @@ func propertyChanged(property:String, oldValue, newValue):
 				addDrillbertHud()
 
 func addDrillbertHud():
-	var _hud = Level.hud.addHudElement({"hud": "mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn"})
+	var scene = load("res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn")
+	var instance = scene.instantiate()
+	Level.addHudElement(instance)
+
+	#var _hud = Level.addHudElement({"hud": "mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn"})
 
 func modInit():
 	pass
