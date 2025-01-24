@@ -30,12 +30,9 @@ func propertyChanged(property:String, oldValue, newValue):
 				addDrillbertHud()
 
 func addDrillbertHud():
-	var scene = load("res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn")
-	var instance = scene.instantiate()
-	Level.addHudElement(instance)
-
-	#var _hud = Level.addHudElement({"hud": "mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn"})
-
+	var drillbert_hud_scene = preload("res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.tscn").instantiate()
+	Level.addHudElement(drillbert_hud_scene)
+	
 func modInit():
 	pass
 	
