@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://c5b8qwdybsgxl"]
 
-[ext_resource type="Texture2D" uid="uid://dtkoj7drnnnn" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_sleeping.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dwdg2o8rqh0kg" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_sleeping.png" id="1"]
 [ext_resource type="Script" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/DrillbertSleepingIndicator.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://cpllqfe25s0nw" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_awake.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://bsn61rnrjb0d" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_sleeping_zzz.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dgfkwl1pawu6l" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_awake.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c4wkmxb86cmmp" path="res://mods-unpacked/Raffa-DrillbertSleepIndicator/extensions/content/hud/drillbertsleepindicator_sleeping_zzz.png" id="4"]
 
 [sub_resource type="Animation" id="1"]
 length = 0.001

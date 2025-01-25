@@ -1,11 +1,13 @@
 extends "res://content/gadgets/drillbot/Drillbot.gd"
 
-func goToSleep():
-	super.goToSleep()
-	Data.apply("drillbert.sleeping", true)
-	#print("Drillbert went to sleep!")
+signal state_changed(new_state)
+signal modded_drillbot_added()
+var _state: int = State.SLEEPING
 
-func wakeUp():
-	super.wakeUp()
-	Data.apply("drillbert.sleeping", false)
-	#print("Good morning Drillbert! Did you have any dreams?")
+func setState(to):
+	super.setState(to)
+	emit_signal("state_changed", to)
+	
+func _ready():
+	super._ready()
+	setState(_state)
